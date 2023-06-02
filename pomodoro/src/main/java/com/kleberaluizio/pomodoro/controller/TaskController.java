@@ -1,4 +1,4 @@
-package com.kleberaluizio.pomodoro.task;
+package com.kleberaluizio.pomodoro.controller;
 
 import org.springframework.stereotype.Controller;
 

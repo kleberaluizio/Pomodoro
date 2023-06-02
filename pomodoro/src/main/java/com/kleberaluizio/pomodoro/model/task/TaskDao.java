@@ -1,4 +1,4 @@
-package com.kleberaluizio.pomodoro.task;
+package com.kleberaluizio.pomodoro.model.task;
 
 import org.springframework.stereotype.Service;
 
