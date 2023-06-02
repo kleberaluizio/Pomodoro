@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}"
+>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>TASKS</title>
 </head>
 <body>
 
+<div layout:fragment="content">
+    <h1>TASKS</h1>
+
+<!--    <a href="/task/task-registration">New</a>-->
+
+    <table class ="center-table">
+        <thead>
+        <tr>
+            <th>Tasks</th>
+            <th class ="center-column">    sprintsGoal  </th>
+            <th class ="center-column">    sprintsDone  </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="task: ${tasks}">
+            <td th:text="${task.name}"></td>
+            <td th:text="${task.sprintsGoal}" class ="center-column"></td>
+            <td th:text="${task.sprintsDone}" class ="center-column"></td>
+<!--            <td>-->
+<!--                <a th:href="@{/filmes/formulario?id={id}(id=${filme.id})}">Editar</a>-->
+
+<!--                <form action="/filmes" method="post">-->
+<!--                    <input type="hidden" name="_method" value="delete">-->
+<!--                    <input type="hidden" name="id" th:value="${filme.id}">-->
+
+<!--                    <input type="submit" value="Excluir">-->
+<!--                </form>-->
+<!--            </td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
