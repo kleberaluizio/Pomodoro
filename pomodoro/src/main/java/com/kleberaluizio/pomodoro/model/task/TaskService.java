@@ -17,4 +17,8 @@ public class TaskService {
     public List<Task> getAllTasks() {
         return taskDao.selectAllTasks();
     }
+
+    public void addTask(Task task) {
+        taskDao.insertTask(task);
+    }
 }

@@ -28,26 +28,23 @@ label {
 }
 form fieldset {
     border: none;
-    padding: 2rem 0;
+    padding: 2rem;
     border:3px solid #3b3b4f;
 }
-/*div form {*/
-/*    margin: 3em 0;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    text-align: initial;*/
-/*}*/
+
 .center-table {
     margin: 0 auto;
+}
+div a {
+    margin: 0 auto;
+    text-align: center;
 }
 
 .center-column {
     text-align: center;
     min-width: 150px;
 }
-h1, p {
+h1, p{
     margin: 1em auto;
     text-align: center;
 }

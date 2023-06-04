@@ -11,19 +11,18 @@
 <div layout:fragment="content">
     <h1>TASK REGISTRATION</h1>
 
-    <form>
+    <form method="post" action="/tasks/registration">
         <fieldset>
-            <div class="input-group">
-                <label for="task-name">What are you working on?</label>
-                <input id="task-name" name="task-name">
-            </div>
-<!--            <label class="flex-col" for="task-name">What are you working on?-->
-<!--                <input id="task-name" name="task-name">-->
-<!--            </label>-->
 
-            <label for="sprintsGoal">How much time you intend to invest?
-                <input id="sprintsGoal" name="sprintsGoal">
-            </label>
+            <div class="input-group">
+                <label for="name">What are you working on?</label>
+                <input id="name" name="name" th:value="${task?.name}">
+                <label for="sprintsGoal" >How much time you intend to invest?
+                <input id="sprintsGoal" name="sprintsGoal" th:value="${task?.sprintsGoal}">
+                </label>
+            </div>
+
+            <input type="submit" value="Add">
 
         </fieldset>
     </form>

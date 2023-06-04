@@ -16,4 +16,9 @@ public class TaskDataAccessService implements TaskDao{
     public List<Task> selectAllTasks() {
         return taskRepository.findAll();
     }
+
+    @Override
+    public void insertTask(Task task) {
+        taskRepository.save(task);
+    }
 }
