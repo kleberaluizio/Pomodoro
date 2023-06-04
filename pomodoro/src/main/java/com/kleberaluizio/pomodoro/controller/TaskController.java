@@ -1,6 +1,5 @@
 package com.kleberaluizio.pomodoro.controller;
 
-import com.kleberaluizio.pomodoro.model.task.Task;
 import com.kleberaluizio.pomodoro.model.task.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,6 +24,12 @@ public class TaskController {
     public String getTasks(Model model){
         model.addAttribute("tasks",taskService.getAllTasks());
         return "task/list-of-tasks";
+    }
+
+    @GetMapping("/registration")
+    public String taskRegistration( ){
+
+        return "task/task-registration";
     }
 
 //    @PostMapping

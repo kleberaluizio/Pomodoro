@@ -9,7 +9,28 @@ body {
     align-items: center;
 
 }
+form {
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
 
+input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+form fieldset {
+    border: none;
+    padding: 2rem 0;
+    border:3px solid #3b3b4f;
+}
 /*div form {*/
 /*    margin: 3em 0;*/
 /*    display: flex;*/
