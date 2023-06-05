@@ -35,10 +35,17 @@ form fieldset {
 .center-table {
     margin: 0 auto;
 }
-div a {
+
+div > a {
+    text-decoration: underline;
+    font-size: 18px;
+    display: inline-block;
     margin: 0 auto;
-    text-align: center;
 }
+/*div a {*/
+/*    margin: 0 auto;*/
+/*    text-align: center;*/
+/*}*/
 
 .center-column {
     text-align: center;
