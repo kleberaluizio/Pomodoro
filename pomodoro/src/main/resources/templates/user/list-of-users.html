@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}"
+>
+<head>
+    <title>TASKS</title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <h1>USERS</h1>
+
+    <table class ="center-table">
+        <thead>
+        <tr>
+            <th class ="center-column">    First Name  </th>
+            <th class ="center-column">    Last Name  </th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.firstName}" class ="center-column"></td>
+            <td th:text="${user.lastName}" class ="center-column"></td>
+<!--            <td>-->
+<!--                <a th:href="@{/filmes/formulario?id={id}(id=${filme.id})}">Editar</a>-->
+
+<!--                <form action="/filmes" method="post">-->
+<!--                    <input type="hidden" name="_method" value="delete">-->
+<!--                    <input type="hidden" name="id" th:value="${filme.id}">-->
+
+<!--                    <input type="submit" value="Excluir">-->
+<!--                </form>-->
+<!--            </td>-->
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="/user/registration">Add New task</a>
+
+</div>
+</body>
+</html>

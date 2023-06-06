@@ -9,7 +9,7 @@ import java.util.List;
 public class TaskService {
     private final TaskDao taskDao;
 
-    public TaskService(@Qualifier("jpa") TaskDao taskDao) {
+    public TaskService(@Qualifier("taskJpa") TaskDao taskDao) {
         this.taskDao = taskDao;
     }
 

@@ -36,19 +36,10 @@ public class TaskController {
     @PostMapping("/registration")
     @Transactional
     public String registerTask(TaskRegistrationRequest taskRegistrationData){
-        System.out.println(taskRegistrationData);
         var task = new Task(taskRegistrationData);
 
         taskService.addTask(task);
         return "redirect:/tasks";
     }
 
-//    @PostMapping
-//    public String registerNewTask(TaskRegistrationRequest data){
-//        var task = new Task(data);
-//
-//        //add to db
-//
-//        return "redirect:/filmes"; // redireciona para um requisicao para a URL /filmes
-//    }
 }

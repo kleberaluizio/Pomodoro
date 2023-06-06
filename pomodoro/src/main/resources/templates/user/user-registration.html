@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{template.html}"
+>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h1>USER REGISTRATION</h1>
+
+    <form method="post" action="/user/registration">
+        <fieldset>
+
+            <div class="input-group">
+                <label for="firstName">First name:
+                    <input id="firstName" name="firstName" th:value="${user?.firstName}">
+                </label>
+                <label for="lastName">Last name:
+                    <input id="lastName" name="lastName" th:value="${user?.lastName}">
+                </label>
+            </div>
+
+            <input type="submit" value="Add">
+
+        </fieldset>
+    </form>
+
+</div>
+</body>
+</html>
